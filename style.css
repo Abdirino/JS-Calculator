@@ -1,0 +1,89 @@
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all .5s ease;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background: linear-gradient(to left, lime,aqua);
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.calculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #111;
+}
+.theme-toogler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+.theme-toogler.activate{
+    color: #333;
+}
+.theme-toogler.activate::before{
+    background-color: #fff;
+}
+.theme-toogler::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+#display{
+    margin: 0 10px;
+    height: 150xp;
+    border-radius: 10px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 10px;
+    overflow-x: scroll;
+}
+#display::-webkit-scrollbar{
+    display: block;
+    height: 4px;
+}
+button{
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+button:hover{
+    transform: scale(1.08);
+}
+button:active{
+    transform: scale(1.04);
+}
+
